@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ol 
+    each val in messages
+     li= val.user +" Says " + val.text + " at " + val.added
+
+  a(href='/new') Sumbit A New Form 
