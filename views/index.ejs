@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Message Board</title>
+  </head>
+  <body>
+    <h2><%= title %></h2>
+    <% messages.map((msg,index)=>{ %>
+    <li>
+      <span>User <%= msg.user %></span>
+      <span>Text <%= msg.text %></span>
+      <span>Added On <%= msg.added %></span>
+      <a href="<%=index %>"><button>Details of the message</button></a>
+    </li>
+
+    <%}) %>
+
+    <a href="/new">Submit an user form.</a>
+  </body>
+</html>
